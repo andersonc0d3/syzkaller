@@ -41,6 +41,7 @@ const (
 	FlagEnableCgroups                         // setup cgroups for testing
 	FlagEnableCloseFds                        // close fds after each program
 	FlagEnableDevlinkPCI                      // setup devlink PCI device
+	FlagEnableUSB                             // setup and use /dev/raw-gadget for USB emulation
 )
 
 // Per-exec flags for ExecOpts.Flags:

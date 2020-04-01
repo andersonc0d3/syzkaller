@@ -380,6 +380,9 @@ func (ctx *Context) createSyzTest(p *prog.Prog, sandbox string, threaded, cov bo
 	if ctx.Features[host.FeatureDevlinkPCI].Enabled {
 		cfg.Flags |= ipc.FlagEnableDevlinkPCI
 	}
+	if ctx.Features[host.FeatureUSBEmulation].Enabled {
+		cfg.Flags |= ipc.FlagEnableUSB
+	}
 	if ctx.Debug {
 		cfg.Flags |= ipc.FlagDebug
 	}

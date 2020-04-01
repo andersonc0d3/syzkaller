@@ -329,5 +329,8 @@ func createConfig(target *prog.Target,
 	if featuresFlags["devlink_pci"].Enabled && features[host.FeatureDevlinkPCI].Enabled {
 		config.Flags |= ipc.FlagEnableDevlinkPCI
 	}
+	if featuresFlags["usb"].Enabled && features[host.FeatureUSBEmulation].Enabled {
+		config.Flags |= ipc.FlagEnableUSB
+	}
 	return config, execOpts
 }

@@ -115,6 +115,7 @@ static bool flag_net_reset;
 static bool flag_cgroups;
 static bool flag_close_fds;
 static bool flag_devlink_pci;
+static bool flag_usb;
 
 static bool flag_collect_cover;
 static bool flag_dedup_cover;
@@ -474,6 +475,7 @@ void parse_env_flags(uint64 flags)
 	flag_cgroups = flags & (1 << 9);
 	flag_close_fds = flags & (1 << 10);
 	flag_devlink_pci = flags & (1 << 11);
+	flag_usb = flags & (1 << 12);
 }
 
 #if SYZ_EXECUTOR_USES_FORK_SERVER

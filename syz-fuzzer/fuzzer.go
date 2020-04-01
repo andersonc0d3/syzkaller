@@ -217,6 +217,9 @@ func main() {
 	if r.CheckResult.Features[host.FeatureDevlinkPCI].Enabled {
 		config.Flags |= ipc.FlagEnableDevlinkPCI
 	}
+	if r.CheckResult.Features[host.FeatureUSBEmulation].Enabled {
+		config.Flags |= ipc.FlagEnableUSB
+	}
 
 	if *flagRunTest {
 		runTest(target, manager, *flagName, config.Executor)
